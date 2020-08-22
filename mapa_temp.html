@@ -7,11 +7,12 @@
             <meta name="description" content="Demo project with jQuery">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-                <style type="text/css">
-                        body > .container-fluid {
-                                padding: 60px 15px 0;
-                        }
-                </style>
+            <!--leaflet-->
+                <script src="lib/leaflet/leaflet.js" ></script>
+                <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+                <link rel="stylesheet" href="style.css">
+            <!-- CAPAS JSON -->
+                <script type="text/javascript" src="emisiones.js"></script>
         </head>
         <body>
                 <!-- Fixed navbar -->
@@ -30,8 +31,15 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Objetivo</a></li>
-            <li class="active"><a href="datos.html">Datos</a></li>
-            <li><a href="aespacial.html">Análisis espacial</a></li>
+            <li><a href="datos_tf.html">Datos</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Analisis Espacial<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="aespacial.html">Autocorrelación</a></li>
+                <li><a href="ppp.html">Patrones Puntuales</a></li>
+                <li><a href="mapa_temp.html">Mapa</a></li>  
+              </ul>
+            </li>
             <li><a href="fuentes.html">Fuentes</a></li>
             
             <li class="dropdown">
@@ -53,14 +61,29 @@
       </div>
     </nav>
     <!-- Begin page content -->
-    <div id="container" class="container-fluid">
-        
-    </div>
+    <div class="padding" id ="map-container">
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>¿Quieres conocer las emisiones de contaminantes que hay donde vives?</h3>
+                        <p>Da click en tu municipio o alcaldía</p>
+                        <h3>¿Quieres saber te encuentars en un hotspot de algún contaminante?</h3>
+                        <p>Elije la capa del contaminante</p>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="map"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </body>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript"></script>
-
+<script type="text/javascript" src="map.js"></script>
+<!--js del mapa-->
+<script src="map.js"></script>
 
 </html>
