@@ -12,8 +12,12 @@
                                 padding: 60px 15px 15px 15px;
                                 display: flex;
                                 text-align: justify;}
-                        .box {padding: 15px 15px 15px 15px;} 
-                        h3 {text-align: center;}                          
+                        .box {padding: 15px 15px 15px 15px;
+                              -ms-flex: 1; 
+                                flex: 1;}
+                        #linea {padding-top: 60px;} 
+                        h3 {text-align: center;} 
+                        .diario{text-align: center;}                         
                                       
                 </style>
         </head>
@@ -76,17 +80,41 @@
           pueden generar, es a través del monitoreo y la difusión continuos del estado de la calidad del aire.
           El Sistema de Monitoreo Atmosférico (SIMAT), de la CDMX, cuenta con 44 sitios de monitoreo distribuidos 
           en la ZMVM. Estos sitios se conocen como estaciones de monitoreo de calidad del aire, y en la mayoría 
-          se utilizan equipos continuos para realizar la medición de los contaminantes criterio requeridos por la
-           normatividad federal: dióxido de azufre, monóxido de carbono, dióxido de nitrógeno, ozono y partículas 
-           suspendidas [3]. <br>
-          La huella urbana crece aceleradamente en los últimos años, así como la flota vehicular y el 
-           registro de nuevas industrias, por ello, <strong> es de suma importancia asegurar que la ubicación y representatividad de 
-           las estaciones de monitoreo atmosférico se encuentran en los puntos clave para medir los contaminantes 
-           sobre todo en los hot-spots de contaminación que se tienen en la ciudad </strong> </p>
+          se utilizan equipos continuos para realizar la medición de los contaminantes siguiendo los criterios requeridos por la
+          normatividad federal: dióxido de azufre, monóxido de carbono, dióxido de nitrógeno, ozono y partículas 
+          suspendidas [3].</p>
       </div>
-      <div class= "box">
-        <img src="https://media.metrolatam.com/2020/02/16/calidaddelaire16-14e0da716af93de54414b579e1be0fb3-1200x0.jpg" width='600' height='500' alt="No disponible">    
+      <div id= "linea" class= "box">
+        <p>La huella urbana crece aceleradamente en los últimos años, así como la flota vehicular y el 
+          registro de nuevas industrias, por ello, <strong> es de suma importancia conocer si existen zonas de 
+          alta concentración de contaminantes y que la población conozca esas zonas, donde los contaminantes
+          pueden representar un potencial riesgo para su salud. De igual manera es importante conocer la 
+          saturación de industrias que existe en la ZMVM para regular con esto la apertura de nuevas industrias</strong></p>
+        <h5><strong> ______________________________________________________</strong> </h5>
+        <h4>Objetivos de nuestro trabajo final:</h4>
+        <ul>
+          <li>Explorar los datos del Inventario de Emisiones 2016 de la ZMVM, con énfasis en las emisiones
+            de <strong>Material Particulado (PM10 y PM2.5), Compuestos Órgánicos Volátiles (COV) y Óxidos de 
+            Nitrógeno (NOX)</strong></li>
+          <li>Detectar hotspots de los contaminantes mencionados por medio de un análisis de <strong>Autocorrelación
+            espacial (I de Moran y LISA)</strong></li>
+          <li>Identificar la distribución espacial de las industrias registradas como fuentes fijas de emisiones
+            en la ZMVM mediante un análisis de <strong>Patrones Puntuales</strong> y un mapa de <strong>Densidad
+              de Kernel</strong></li>
+          <li>Realizar un mapa interactivo que permita visualizar de una manera amigable los resultados de este 
+            trabajo</li>
+        </ul>   
       </div>
+      <div class= "box" style="background-color: whitesmoke;">
+        <a href="http://www.aire.cdmx.gob.mx/default.php?opc=%27ZKBhnmWkYg==%27"><img src="PM10y25.PNG" width="350" height="250" alt="No disponible"></a>
+        <h5><strong> ___________________________________________</strong> </h5>
+        <a href="http://www.aire.cdmx.gob.mx/default.php?opc=%27ZKBhnmWkYQ==%27"><img src="noxycov.PNG" width="350" height="250" alt="No disponible"></a>
+      </div>
+    </div>
+    <div class= "diario">
+      <h3>Monitoreo Diario de la Calidad de Aire</h3>
+      <p>Da click en la imagen para ir a la página de SEDEMA</p>
+      <a href="http://www.aire.cdmx.gob.mx/default.php"><img src="monitoreo_diario.PNG" width="1200" height="500" alt="No disponible"></a>
     </div>
         </body>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
